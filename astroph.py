@@ -21,6 +21,9 @@ class Article(object):
         self.authors = authors
 
         self.group = re.findall('\[([^]]*)\]', title)[0]
+        
+        linkspl = link.split('/')
+        self.pdflink = 'http://arxiv.org/pdf/' + linkspl[-1]
 
     def getTitle(self):
         return self.title
