@@ -25,18 +25,6 @@ class Article(object):
         linkspl = link.split('/')
         self.pdflink = 'http://arxiv.org/pdf/' + linkspl[-1]
 
-    def getTitle(self):
-        return self.title
-
-    def getLink(self):
-        return self.link
-
-    def getAbstract(self):
-        return self.abstract
-
-    def getAuthors(self):
-        return self.authors
-
 def get_artlist():
     url = 'http://export.arxiv.org/rss/astro-ph'
 
