@@ -65,10 +65,24 @@ def print_titles(art_list,group='all'):
     
     return
 
+def find_in_abstracts(artList, s):
+    '''Finds keywords in the list of strings s in the abstracts. Returns a 
+    list of articles that have at least one of the keywords'''
+
+    matched_articles = []
+    for n,art in enumerate(artList):
+        for keyword in s:
+            if keyword in art.abstract and n not in matched_articles:
+                matched_articles.append(n)
+
+    return matched_articles
+
 ################################################
 if __name__ == '__main__':
 
     artList = get_artlist()
 
-    print_titles(artList, 'GA')
-    print_titles(artList, 'CO')
+    #print_titles(artList, 'GA')
+    #print_titles(artList, 'CO')
+
+    print find_in_abstracts(artList,['black hole'])
