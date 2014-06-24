@@ -72,7 +72,7 @@ def find_in_abstracts(artList, s):
     matched_articles = []
     for n,art in enumerate(artList):
         for keyword in s:
-            if keyword in art.abstract and n not in matched_articles:
+            if keyword.lower() in art.abstract.lower() and n not in matched_articles:
                 matched_articles.append(n)
 
     return matched_articles
@@ -85,4 +85,4 @@ if __name__ == '__main__':
     #print_titles(artList, 'GA')
     #print_titles(artList, 'CO')
 
-    print find_in_abstracts(artList,['black hole'])
+    print find_in_abstracts(artList,['black Hole'])
