@@ -51,6 +51,8 @@ def get_artlist():
 
     return artList
     
+######################################################
+# Tools
 def print_titles(art_list,group='all'):
     '''Possible groups are astro-ph.GA, astro-ph.SR, astro-ph.IM, astro-ph.CO, 
     astro-ph.HE, astro-ph.HE'''
